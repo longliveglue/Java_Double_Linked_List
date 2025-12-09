@@ -1,32 +1,79 @@
-public class Node implements Nodeable{
+public class Node implements Nodeable {
+
+    Node leftLink = null;
+    Node rightLink = null;
+    Object value = null;
+    boolean firstNext = true;
+
+    public Node(Object value){
+        this.value = value;
+    }
+
+@Override
+public Object getValue(){
+        return value;
+}
 
     @Override
     public boolean hasNext() {
+        if (rightLink != null) {
+            return true;
+        }
         return false;
     }
 
+    public void setRightLink(Node rightLink){
+        this.rightLink = rightLink;
+    }
+
+    public void setLeftLink(Node leftLink){
+        this.leftLink = leftLink;
+    }
+
     @Override
-    public org.w3c.dom.Node next() {
+    public Node next() {
+        if(firstNext){
+            Node currentNode = new Node(getValue());
+            currentNode.setRightLink(rightLink);
+            return currentNode;
+        } else if (hasNext()){
+            return rightLink;
+        }
         return null;
     }
 
     @Override
     public boolean hasPrevious() {
+        if (leftLink != null) {
+            return true;
+        }
         return false;
     }
 
     @Override
-    public org.w3c.dom.Node previous() {
+    public Node previous() {
+        if(hasPrevious()){
+            return leftLink;
+        }
         return null;
     }
 
     @Override
-    public boolean addNext(Object node) {
+    public boolean addNext(Node node) {
+        if(hasNext()){
+            rightLink.addNext(node);
+        } else {
+            rightLink = node;
+            return true;
+        }
         return false;
     }
 
+
+
     @Override
-    public boolean remove() {
+    public boolean remove(Node node) {
+
         return false;
     }
 
