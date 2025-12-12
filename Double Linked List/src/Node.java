@@ -3,7 +3,7 @@ public class Node implements Nodeable {
     Node leftLink = null;
     Node rightLink = null;
     Object value = null;
-    boolean firstNext = true;
+
 
     public Node(Object value){
         this.value = value;
@@ -22,6 +22,11 @@ public Object getValue(){
         return false;
     }
 
+    @Override
+    public Node next() {
+        return null;
+    }
+
     public void setRightLink(Node rightLink){
         this.rightLink = rightLink;
     }
@@ -30,17 +35,7 @@ public Object getValue(){
         this.leftLink = leftLink;
     }
 
-    @Override
-    public Node next() {
-        if(firstNext){
-            Node currentNode = new Node(getValue());
-            currentNode.setRightLink(rightLink);
-            return currentNode;
-        } else if (hasNext()){
-            return rightLink;
-        }
-        return null;
-    }
+
 
     @Override
     public boolean hasPrevious() {
