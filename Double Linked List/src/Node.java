@@ -9,8 +9,8 @@ public class Node implements Nodeable {
         this.value = value;
     }
 
-@Override
-public Object getValue(){
+    @Override
+    public Object getValue(){
         return value;
 }
 
@@ -24,7 +24,7 @@ public Object getValue(){
 
     @Override
     public Node next() {
-        return null;
+        return rightLink;
     }
 
     public void setRightLink(Node rightLink){
