@@ -24,6 +24,7 @@ public class Node implements Nodeable {
 
     @Override
     public Node next() {
+
         return rightLink;
     }
 
@@ -34,8 +35,6 @@ public class Node implements Nodeable {
     public void setLeftLink(Node leftLink){
         this.leftLink = leftLink;
     }
-
-
 
     @Override
     public boolean hasPrevious() {
@@ -63,8 +62,6 @@ public class Node implements Nodeable {
         }
         return false;
     }
-
-
 
     @Override
     public boolean remove(Node node) {
