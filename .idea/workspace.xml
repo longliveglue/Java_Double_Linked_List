@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5650ae27-f820-4b1f-8914-706bd61901e8" name="Changes" comment="Nodable interface is now mostly done. I have created the Node concrete class that implements Nodeable. Still struggling to get my head around how these link list works. Constantly calling themselves." />
+    <list default="true" id="5650ae27-f820-4b1f-8914-706bd61901e8" name="Changes" comment="Nodable interface is now mostly done. I have created the Node concrete class that implements Nodeable. Still struggling to get my head around how these link list works. Constantly calling themselves.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_12_2025,_19_39_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_12_2025__19_39__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Double Linked List/src/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Double Linked List/src/DoubleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Double Linked List/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Double Linked List/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Double Linked List/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/Double Linked List/src/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Double Linked List/src/Nodeable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Double Linked List/DoubleLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Double Linked List/DoubleLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Double Linked List/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Double Linked List/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Double Linked List/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Double Linked List/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Double Linked List/Nodeable.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765827997624</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nodable interface is now mostly done. I have created the Node concrete class that implements Nodeable. Still struggling to get my head around how these link list works. Constantly calling themselves.">
+      <option name="closed" value="true" />
+      <created>1765828097017</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765828097017</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

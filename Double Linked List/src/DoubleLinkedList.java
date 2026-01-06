@@ -1,46 +1,32 @@
 public class DoubleLinkedList {
-    Object root;
-    Node rootNode;
-    Node leftLink;
-    Node rightLink;
-    Node currentNode;
 
-    public DoubleLinkedList(Object root){
-        this.root = root;
-        this.leftLink = null;
-        rootNode = new Node(root);
-        currentNode = rootNode;
+    Node rootNode = null;
+    Node currentNode = null;
 
+    public DoubleLinkedList(Object newObj){
+        this.rootNode = new Node(newObj);
+        this.currentNode = rootNode;
     }
 
-    // This will pull the value out of the current node.
+    public boolean addNext(Object newObj){
+
+        // Check if the classes of both objects are exactly the same
+        if(newObj.getClass() == rootNode.getValue().getClass()) {
+            rootNode.addNext(newObj);
+            return true;
+        }
+        return false;
+    }
+
     public Object getValue(){
         return currentNode.getValue();
     }
 
-    // This checks if the current value has a node stored in the rightLink
-    public Boolean hasNext(){
-    if(currentNode.hasNext()){
-        return true;
-    }
-    return false;
-    }
-
-    public boolean addNext(Object nextObject){
-        Node nextNode = new Node(nextObject);
-        Node previousNode = currentNode;
-        Node tempNode =  currentNode;
-
-        while(tempNode.hasNext()){
-            previousNode = tempNode;
-            tempNode = tempNode.next();
+    public boolean hasNext(){
+        if (currentNode.hasNext()){
+            return true;
         }
-
-        nextNode.leftLink = previousNode;
-
-        tempNode.rightLink = nextNode;
-
-        return true;
+        return false;
     }
 
     public void next(){
@@ -48,16 +34,16 @@ public class DoubleLinkedList {
     }
 
     public boolean hasPrevious(){
-
-        if (currentNode.leftLink != null){
+        if(currentNode.hasPrevious()){
             return true;
-        };
+        }
         return false;
     }
 
     public void previous(){
         currentNode = currentNode.previous();
     }
+
 
 }
 

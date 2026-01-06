@@ -2,24 +2,17 @@ public class Main{
 
     public static void main(String[] args){
 
-        DoubleLinkedList listy = new DoubleLinkedList(1);
+        DoubleLinkedList link = new DoubleLinkedList( "Hey");
 
-        listy.addNext(2);
-        listy.addNext(3);
-        listy.addNext(4);
+        link.addNext("you");
+        link.addNext("there");
 
-        System.out.println(listy.getValue());
-        listy.next();
-        System.out.println(listy.getValue());
-        listy.next();
-        System.out.println(listy.getValue());
-        listy.next();
-        System.out.println(listy.getValue());
-        listy.next();
-        System.out.println(listy.getValue());
-        listy.next();
-        System.out.println(listy.getValue());
+        while(link.hasNext()){
+            System.out.println(link.getValue());
+            link.next();
+        }
 
+        link.getValue();
 
 
     }

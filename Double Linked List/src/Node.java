@@ -1,20 +1,41 @@
-public class Node implements Nodeable {
+public class Node {
 
-    Node leftLink = null;
-    Node rightLink = null;
-    Object value = null;
+    private Node leftLink;
+    private Node rightLink;
+    private Object value;
 
-
-    public Node(Object value){
-        this.value = value;
+    public Node(Object newObj) {
+        this.value = newObj;
     }
 
-    @Override
-    public Object getValue(){
+    public Object getValue() {
         return value;
-}
+    }
 
-    @Override
+    public boolean addNext(Object newObj) {
+        Node newNode = new Node(newObj);
+
+        if (this.rightLink == null) {
+            rightLink = newNode;
+            rightLink.addLeftLink(this);
+        } else {
+            rightLink.addNext(newObj);
+        }
+        return true;
+    }
+
+    public void addLeftLink(Node leftNode) {
+        this.leftLink = leftNode;
+    }
+
+    public void addRightLink(Node rightNode) {
+        this.rightLink = rightNode;
+    }
+
+    public Node next() {
+        return rightLink;
+    }
+
     public boolean hasNext() {
         if (rightLink != null) {
             return true;
@@ -22,21 +43,10 @@ public class Node implements Nodeable {
         return false;
     }
 
-    @Override
-    public Node next() {
-
-        return rightLink;
+    public Node previous() {
+        return leftLink;
     }
 
-    public void setRightLink(Node rightLink){
-        this.rightLink = rightLink;
-    }
-
-    public void setLeftLink(Node leftLink){
-        this.leftLink = leftLink;
-    }
-
-    @Override
     public boolean hasPrevious() {
         if (leftLink != null) {
             return true;
@@ -44,33 +54,65 @@ public class Node implements Nodeable {
         return false;
     }
 
-    @Override
-    public Node previous() {
-        if(hasPrevious()){
-            return leftLink;
-        }
-        return null;
-    }
-
-    @Override
-    public boolean addNext(Node node) {
-        if(hasNext()){
-            rightLink.addNext(node);
-        } else {
-            rightLink = node;
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean remove(Node node) {
-
-        return false;
-    }
-
-    @Override
-    public boolean addItemAt(int postion, Object node) {
-        return false;
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
