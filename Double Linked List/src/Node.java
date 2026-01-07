@@ -12,16 +12,17 @@ public class Node {
         return value;
     }
 
-    public boolean addNext(Object newObj) {
+    public Node addNext(Object newObj) {
         Node newNode = new Node(newObj);
 
         if (this.rightLink == null) {
             rightLink = newNode;
             rightLink.addLeftLink(this);
+            return rightLink;
         } else {
             rightLink.addNext(newObj);
         }
-        return true;
+        return null;
     }
 
     public void addLeftLink(Node leftNode) {

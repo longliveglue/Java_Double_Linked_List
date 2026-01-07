@@ -6,13 +6,24 @@ public class Main{
 
         link.addNext("you");
         link.addNext("there");
+        link.addNext("what");
 
+
+        System.out.println(link.getValue());
         while(link.hasNext()){
-            System.out.println(link.getValue());
             link.next();
+            System.out.println(link.getValue());
         }
 
-        link.getValue();
+        System.out.println();
+
+        System.out.println(link.getValue());
+        while(link.hasPrevious()){
+            link.previous();
+            System.out.println(link.getValue());
+        }
+
+
 
 
     }
